@@ -1,10 +1,10 @@
 def caching_fibonacci():
     """
-        Creates a function to calculate Fibonacci numbers using caching.
+    Creates a function to calculate Fibonacci numbers using caching.
 
-        Returns:
-            function: The internal function fibonacci(n) calculates the nth Fibonacci number.
-        """
+    Returns:
+        function: The internal function fibonacci(n) calculates the nth Fibonacci number.
+    """
     cache = {}  # Dictionary for storing calculated values
 
     def fibonacci(n):
@@ -23,6 +23,7 @@ def caching_fibonacci():
             return 1
         if n in cache:
             return cache[n] # Return the value from the cache, if it exists
+
         cache[n] = fibonacci(n - 1) + fibonacci(n - 2) # Calculate and store the result in the cache
         # print('{} not in cache {}'.format(n, cache))
         return cache[n]
