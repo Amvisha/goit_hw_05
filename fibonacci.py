@@ -27,6 +27,7 @@ def caching_fibonacci():
         cache[n] = fibonacci(n - 1) + fibonacci(n - 2) # Calculate and store the result in the cache
         # print('{} not in cache {}'.format(n, cache))
         return cache[n]
+
     return fibonacci # Returning the inner function
 
 # Example of use:
